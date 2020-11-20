@@ -1,14 +1,18 @@
 import React, { Component } from "react"
-import Todos from "./Todos"
-import AddTodo from "./AddTodoForm"
+import CactiTodos from "./Todos"
+import AddCactiTodo from "./AddTodoForm"
 
 // this will be the root component where we save the state
 
 class App extends Component {
   state = {
     todos: [
-      { id: 1, content: "Finish dev project" },
-      { id: 2, content: "Learn some Ui Ux" },
+      { id: 1, content: "Buy some cacti" },
+      {
+        id: 2,
+        content:
+          "Plant said cacti in the yard with a big shovel. Treat with care.",
+      },
     ],
   }
   delTodo = (id) => {
@@ -32,8 +36,8 @@ class App extends Component {
       <div className="container todo-app">
         <h1 className="center green-text">Cacti Todo List</h1>
         {/* make separate component responsible for listing todos */}
-        <Todos todos={this.state.todos} delTodo={this.delTodo} />
-        <AddTodo addTodo={this.addTodo} />
+        <CactiTodos todos={this.state.todos} delTodo={this.delTodo} />
+        <AddCactiTodo addTodo={this.addTodo} />
       </div>
     )
   }

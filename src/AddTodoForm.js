@@ -2,7 +2,7 @@
 
 import React, { Component } from "react"
 
-class AddTodo extends Component {
+class AddCactiTodo extends Component {
   state = {
     content: "",
   }
@@ -33,4 +33,4 @@ class AddTodo extends Component {
   }
 }
 
-export default AddTodo
+export default AddCactiTodo
